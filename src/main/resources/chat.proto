@@ -1,4 +1,5 @@
 syntax="proto3";
+option java_package="dev.elma.stubs";
 
 service chat{
   rpc send(stream request) returns (stream replay); //bi-directional stream
