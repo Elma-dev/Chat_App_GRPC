@@ -5,6 +5,6 @@ import io.grpc.ServerBuilder;
 
 public class ServerGRPC {
     public static void main(String[] args) {
-        ServerBuilder.forPort(2001).addService()
+        ServerBuilder.forPort(2001).addService();
     }
 }

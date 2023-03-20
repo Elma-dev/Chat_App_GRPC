@@ -2,7 +2,9 @@ syntax="proto3";
 option java_package="dev.elma.stubs";
 
 service chat{
-  rpc send(stream request) returns (stream replay); //bi-directional stream
+  rpc send(stream request) returns (stream request); //bi-directional stream
+  rpc connectReq(connect) returns (request); //request of connection
+  rpc disconnectReq(connect) returns(request); //request of disconnect
 }
 message request{
   string messageFrom=1;
@@ -10,8 +12,6 @@ message request{
   string content=3;
 }
 
-message replay{
-  string messageFrom=1;
-  string messageTo=2;
-  string content=3;
+message connect{
+  string username=1;
 }
