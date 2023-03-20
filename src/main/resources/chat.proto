@@ -1,0 +1,16 @@
+syntax="proto3";
+
+service chat{
+  rpc send(stream request) returns (stream replay); //bi-directional stream
+}
+message request{
+  string messageFrom=1;
+  string messageTo=2;
+  string content=3;
+}
+
+message replay{
+  string messageFrom=1;
+  string messageTo=2;
+  string content=3;
+}
