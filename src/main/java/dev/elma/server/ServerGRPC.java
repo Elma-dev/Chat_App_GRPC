@@ -1,9 +1,7 @@
 package dev.elma.server;
 
 import dev.elma.services.ServicesDefine;
-import io.grpc.Server;
 import io.grpc.ServerBuilder;
-
 import java.io.IOException;
 
 public class ServerGRPC {

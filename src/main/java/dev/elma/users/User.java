@@ -48,8 +48,9 @@ public class User {
            System.out.println("---------------------------------------------");
            System.out.print("Message To : ");
            String messageTo=scanner.next();
+           scanner.nextLine();
            System.out.print("Message : ");
-           message=scanner.next();
+           message=scanner.nextLine();
            System.out.println(message);
            if(message.equals("disc")) {
                Chat.connect disconnect = Chat.connect.newBuilder().setUsername(username).build();
@@ -75,10 +76,5 @@ public class User {
            Chat.request request = Chat.request.newBuilder().setMessageFrom(username).setMessageTo(messageTo).setContent(message).build();
            send.onNext(request);
        }
-
-
-
-
-
     }
 }

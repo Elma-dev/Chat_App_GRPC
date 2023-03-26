@@ -40,16 +40,10 @@ public class ServicesDefine extends chatGrpc.chatImplBase {
                     requestStreamObserver.onNext(request);
                 }
             }
-
             @Override
-            public void onError(Throwable throwable) {
-
-            }
-
+            public void onError(Throwable throwable) {}
             @Override
-            public void onCompleted() {
-
-            }
+            public void onCompleted() {}
         };
     }
 }
